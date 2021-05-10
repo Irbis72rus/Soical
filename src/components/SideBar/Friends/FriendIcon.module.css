@@ -1,0 +1,9 @@
+/* .content {
+  grid-area: c;
+  background-color: cornflowerblue;
+} */
+.friendMain__page{
+  width        : 10px;
+  height       : 10px;
+  border-radius: 30px;
+}

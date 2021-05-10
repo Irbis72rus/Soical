@@ -1,0 +1,9 @@
+/* .content {
+  grid-area: c;
+  background-color: cornflowerblue;
+} */
+
+.sideBarMain {
+  display              : grid;
+  grid-template-columns: 2fr 10fr;
+}
