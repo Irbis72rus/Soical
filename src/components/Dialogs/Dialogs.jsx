@@ -1,7 +1,7 @@
-import DialogItem from './DialogItem/DialogItem';
-import s from './Dialogs.module.css'
-import Massage from './Message/Massage';
 import React from 'react';
+import s from './Dialogs.module.css'
+import DialogItem from './DialogItem/DialogItem';
+import Massage from './Message/Massage';
 
 const Dialogs = (props) => {
 

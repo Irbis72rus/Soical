@@ -23,7 +23,8 @@ const App = function (props) {
         <div className='app-wrapper-content'>
           <Route path='/dialogs'
             render= { () => <DialogsContainer
-              store={props.store}
+            // Убрали стор, когда добавили StoreContext в index.js
+              // store={props.store}
               // Вырезали диспатч стейта но так более правильно 
               // state={props.state.dialogsPage}
               // dialogs={props.state.dialogsPage.dialogs}
@@ -31,7 +32,8 @@ const App = function (props) {
               />} />
           <Route path='/profile'
             render= { () => <Profile
-                store={props.store}
+              // Убрали стор, когда добавили StoreContext в index.js
+                // store={props.store}
                   // profilePage = { props.state.profilePage }
                   // dispatch = { props.dispatch }
               // addPost={props.addPost}

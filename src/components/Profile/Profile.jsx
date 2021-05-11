@@ -7,7 +7,9 @@ const Profile = (props) => {
     return (
         <div>
             <ProfileInfo />
-            <MyPostsContainer store={props.store}
+            <MyPostsContainer 
+                // Убрали стор, когда добавили StoreContext в index.js
+                // store={props.store}
                 // updateNewPostText={props.updateNewPostText}
                 // addPost={props.addPost} 
                 />
