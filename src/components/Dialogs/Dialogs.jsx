@@ -2,11 +2,10 @@ import DialogItem from './DialogItem/DialogItem';
 import s from './Dialogs.module.css'
 import Massage from './Message/Massage';
 import React from 'react';
-import { sendMessageCreator, updateNewMessageBodyCreator } from '../../redux/dialogs-reducer';
 
 const Dialogs = (props) => {
 
-    let state = props.store.getState().dialogsPage;
+    let state = props.dialogsPage;
 
 
     let dialogsElements = state.dialogs.map(d => <DialogItem name={d.name} id={d.id} />);
@@ -16,12 +15,12 @@ const Dialogs = (props) => {
 
     // let newMassageElement = React.createRef();
     let onSendMessageClick = () => {
-        props.store.dispatch(sendMessageCreator());
+        props.sendMessage();
     }
     let onNewMessageChange = (e) => {
         let body = e.target.value;
         // debugger;
-        props.store.dispatch(updateNewMessageBodyCreator(body));
+        props.updateNewMessageBody(body);
     }
 
     
