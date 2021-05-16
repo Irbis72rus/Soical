@@ -5,9 +5,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import { BrowserRouter } from 'react-router-dom';
-import { Provider } from './StoreContext';
+import { Provider } from 'react-redux';
 
-let rerenderEntireTree = (state) => {
   ReactDOM.render(
     <BrowserRouter>
       <React.StrictMode>
@@ -24,10 +23,9 @@ let rerenderEntireTree = (state) => {
     </BrowserRouter>,
     document.getElementById('root')
   );
-}
 
-
-rerenderEntireTree(store.getState());
+// Убрали в 47й лекции (10:50)
+// rerenderEntireTree(store.getState());
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
@@ -39,7 +37,10 @@ rerenderEntireTree(store.getState());
 // store.subscribe(rerenderEntireTree);
 
 // serviceWorker.unregister();
-store.subscribe(() => {
+
+
+// Убрали в 47й лекции (10:50)
+/*store.subscribe(() => {
   let state = store.getState();
   rerenderEntireTree(state);
-});
+});*/
